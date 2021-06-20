@@ -4,8 +4,11 @@ let firstCard, secondCard;
 firstCard = Math.round(2 + Math.random()*(11-2));
 secondCard = Math.round(2 + Math.random()*(11-2));
 
-// Creating a variable to keep a track if the player has Blackjack or not
+// Creating a variable, hasBlackjack, to keep a track if the player has Blackjack or not
 let hasBlackjack = false;
+
+// Creating a variable, isAlive, to check if the player is still in the game or not
+isAlive = true;
 
 // Creating a variable, sum, and setting it to the sum of the two cards
 let sum = firstCard + secondCard;
@@ -19,4 +22,5 @@ if (sum <= 20) {
     hasBlackjack = true;
 } else {
     console.log("Sorry! You're out of the game")
+    isAlive = false;
 }
