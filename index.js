@@ -10,17 +10,22 @@ let hasBlackjack = false;
 // Creating a variable, isAlive, to check if the player is still in the game or not
 isAlive = true;
 
+// Creating a variable, message, to store the message based on a player's sum
+let message="";
+
 // Creating a variable, sum, and setting it to the sum of the two cards
 let sum = firstCard + secondCard;
 console.log(sum);
 
 // Creating a conditional to implement the objective of the game
 if (sum <= 20) {
-    console.log("Would you like to draw a new card?")
+    message = "Would you like to draw a new card?";
 } else if (sum === 21) {
-    console.log("Congratulations! You've got Blackjack!")
+    message = "Congratulations! You've got Blackjack!";
     hasBlackjack = true;
 } else {
-    console.log("Sorry! You're out of the game")
+    message = "Sorry! You're out of the game";
     isAlive = false;
 }
+
+console.log(message);
