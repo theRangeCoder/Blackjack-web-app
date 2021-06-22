@@ -20,4 +20,8 @@ h1 {
     color: white;
     background-color: rgb(48, 48, 161);
     width: 150px;
+    font-weight: bold;
+    padding: 5px 0px;
+    border: none; /* to remove the border of the button */
+    border-radius: 2px; /* to make the corners, a bit curved */
 }
