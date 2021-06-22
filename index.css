@@ -16,3 +16,8 @@ h1 {
     font-style: italic;
 }
 
+#start-game {
+    color: white;
+    background-color: rgb(48, 48, 161);
+    width: 150px;
+}
