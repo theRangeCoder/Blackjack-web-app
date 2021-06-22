@@ -17,15 +17,17 @@ let message="";
 let sum = firstCard + secondCard;
 console.log(sum);
 
-// Creating a conditional to implement the objective of the game
-if (sum <= 20) {
-    message = "Would you like to draw a new card?";
-} else if (sum === 21) {
-    message = "Congratulations! You've got Blackjack!";
-    hasBlackjack = true;
-} else {
-    message = "Sorry! You're out of the game";
-    isAlive = false;
+// Creating a startGame() function (to be executed when the user hits the 'START GAME' button)
+function startGame() {
+    if (sum <= 20) {
+        message = "Would you like to draw a new card?";
+    } else if (sum === 21) {
+        message = "Congratulations! You've got Blackjack!";
+        hasBlackjack = true;
+    } else {
+        message = "Sorry! You're out of the game";
+        isAlive = false;
+    }
+    
+    console.log(message);
 }
-
-console.log(message);
