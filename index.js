@@ -17,6 +17,10 @@ let message="";
 let sum = firstCard + secondCard;
 console.log(sum);
 
+let messageEl = document.getElementById("message-el");
+let cardsEl = document.querySelector("#cards-el");
+let sumEl = document.querySelector("#sum-el"); // based on a CSS selector
+
 // Creating a startGame() function (to be executed when the user hits the 'START GAME' button)
 function startGame() {
     if (sum <= 20) {
@@ -28,6 +32,7 @@ function startGame() {
         message = "Sorry! You're out of the game";
         isAlive = false;
     }
-    
-    console.log(message);
+    cardsEl.textContent += " "+firstCard+" "+secondCard;
+    messageEl.textContent = message;
+    sumEl.textContent += " "+sum;
 }
