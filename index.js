@@ -36,3 +36,7 @@ function startGame() {
     messageEl.textContent = message;
     sumEl.textContent += " "+sum;
 }
+
+function newCard() {
+    console.log("Drawing a new card from the deck!");
+}
