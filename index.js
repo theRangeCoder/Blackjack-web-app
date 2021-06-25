@@ -18,11 +18,15 @@ let sum = firstCard + secondCard;
 console.log(sum);
 
 let messageEl = document.getElementById("message-el");
+
 let cardsEl = document.querySelector("#cards-el");
+
 let sumEl = document.querySelector("#sum-el"); // based on a CSS selector
 
 // Creating a startGame() function (to be executed when the user hits the 'START GAME' button)
 function startGame() {
+    cardsEl.textContent += " "+firstCard+" "+secondCard;
+    
     if (sum <= 20) {
         message = "Would you like to draw a new card?";
     } else if (sum === 21) {
@@ -32,11 +36,20 @@ function startGame() {
         message = "Sorry! You're out of the game";
         isAlive = false;
     }
-    cardsEl.textContent += " "+firstCard+" "+secondCard;
+    
     messageEl.textContent = message;
     sumEl.textContent += " "+sum;
 }
 
 function newCard() {
     console.log("Drawing a new card from the deck!");
+
+    // Creating a new variable to assign the value of a new card
+    let nCard = Math.round(2 + Math.random()*(11-2));
+
+    // Adding the value of the new card to the sum variable
+    sum += nCard;
+
+    // Calling the startGame() function
+    startGame();
 }
