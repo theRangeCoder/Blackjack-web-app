@@ -23,10 +23,10 @@ let cardsEl = document.querySelector("#cards-el");
 
 let sumEl = document.querySelector("#sum-el"); // based on a CSS selector
 
-// Creating a startGame() function (to be executed when the user hits the 'START GAME' button)
-function startGame() {
+// Creating a renderGame() function to render the state of the game at every step
+function renderGame() {
     cardsEl.textContent += " "+firstCard+" "+secondCard;
-    
+
     if (sum <= 20) {
         message = "Would you like to draw a new card?";
     } else if (sum === 21) {
@@ -41,6 +41,10 @@ function startGame() {
     sumEl.textContent += " "+sum;
 }
 
+function startGame() {
+    renderGame();
+}
+
 function newCard() {
     console.log("Drawing a new card from the deck!");
 
@@ -50,6 +54,6 @@ function newCard() {
     // Adding the value of the new card to the sum variable
     sum += nCard;
 
-    // Calling the startGame() function
-    startGame();
+    // Calling the renderGame() function
+    renderGame();
 }
