@@ -45,7 +45,7 @@ function renderGame() {
     }
     
     messageEl.textContent = message;
-    sumEl.textContent += " "+sum;
+    sumEl.textContent = "Sum: "+sum;
 }
 
 function startGame() {
