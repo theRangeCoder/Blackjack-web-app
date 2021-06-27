@@ -59,7 +59,7 @@ function newCard() {
     let nCard = Math.round(2 + Math.random()*(11-2));
 
     // Adding the new card to the cards array
-    cards[cards.length] = nCard;
+    cards.push(nCard);
 
     // Adding the value of the new card to the sum variable
     sum += nCard;
