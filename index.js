@@ -1,8 +1,16 @@
-// Creating two variables, firstCard and secondCard
-// Setting their values to a random number between 2-11
+// Creating a function to generate a random card
+function getRandomCard() {
+    // Math.random() generates a random number in the range [0,1)
+    // Math.random()*a generates a random number in the range [0,a)
+    
+    // returning a number between 2 and 11
+    let n = Math.floor(2 + Math.random()*(11-9));
+    return n;
+}
+
 let firstCard, secondCard;
-firstCard = Math.round(2 + Math.random()*(11-2));
-secondCard = Math.round(2 + Math.random()*(11-2));
+firstCard = getRandomCard();
+secondCard = getRandomCard();
 
 // Creating an array to store the cards
 let cards = [firstCard, secondCard];
@@ -56,7 +64,7 @@ function newCard() {
     console.log("Drawing a new card from the deck!");
 
     // Creating a new variable to assign the value of a new card
-    let nCard = Math.round(2 + Math.random()*(11-2));
+    let nCard = getRandomCard();
 
     // Adding the new card to the cards array
     cards.push(nCard);
