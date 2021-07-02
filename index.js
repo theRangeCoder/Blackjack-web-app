@@ -3,8 +3,9 @@ function getRandomCard() {
     // Math.random() generates a random number in the range [0,1)
     // Math.random()*a generates a random number in the range [0,a)
     
+    // For the sake of simplicity, we assume the value of the ace to be 11 at all times!
     // returning a number between 2 and 11
-    let n = Math.floor(2 + Math.random()*(11-9));
+    let n = 2 + Math.floor(Math.random()*(11-1));
     return n;
 }
 
