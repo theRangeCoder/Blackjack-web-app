@@ -10,24 +10,18 @@ function getRandomCard() {
 }
 
 let firstCard, secondCard;
-firstCard = getRandomCard();
-secondCard = getRandomCard();
 
 // Creating an array to store the cards
-let cards = [firstCard, secondCard];
+let cards = [];
 
 // Creating a variable, hasBlackjack, to keep a track if the player has Blackjack or not
 let hasBlackjack = false;
 
 // Creating a variable, isAlive, to check if the player is still in the game or not
-isAlive = true;
+let isAlive = false;
 
 // Creating a variable, message, to store the message based on a player's sum
 let message="";
-
-// Creating a variable, sum, and setting it to the sum of the two cards
-let sum = firstCard + secondCard;
-console.log(sum);
 
 let messageEl = document.getElementById("message-el");
 
@@ -58,6 +52,16 @@ function renderGame() {
 }
 
 function startGame() {
+    // Setting the starting state to true, now that the player has started the game
+    isAlive = true;
+
+    // Generating the initial cards and adding them to the cards array, now that the player has started the game
+    firstCard = getRandomCard();
+    secondCard = getRandomCard();
+    cards = [firstCard, secondCard];
+
+    sum = firstCard + secondCard;
+
     renderGame();
 }
 
