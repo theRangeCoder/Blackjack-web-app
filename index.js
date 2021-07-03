@@ -66,17 +66,20 @@ function startGame() {
 }
 
 function newCard() {
-    console.log("Drawing a new card from the deck!");
+    // Allowing the user to draw a new card only if the user is alive as well as does not have a Blackjack
+    if (isAlive === true && hasBlackjack === false) {
+        console.log("Drawing a new card from the deck!");
 
-    // Creating a new variable to assign the value of a new card
-    let nCard = getRandomCard();
+        // Creating a new variable to assign the value of a new card
+        let nCard = getRandomCard();
 
-    // Adding the new card to the cards array
-    cards.push(nCard);
+        // Adding the new card to the cards array
+        cards.push(nCard);
 
-    // Adding the value of the new card to the sum variable
-    sum += nCard;
+        // Adding the value of the new card to the sum variable
+        sum += nCard;
 
-    // Calling the renderGame() function
-    renderGame();
+        // Calling the renderGame() function
+        renderGame();
+    }
 }
