@@ -1,12 +1,6 @@
-// Creating a function to generate a random card
-function getRandomCard() {
-    // Math.random() generates a random number in the range [0,1)
-    // Math.random()*a generates a random number in the range [0,a)
-    
-    // For the sake of simplicity, we assume the value of the ace to be 11 at all times!
-    // returning a number between 2 and 11
-    let n = 2 + Math.floor(Math.random()*(11-1));
-    return n;
+let player = {
+    name: "John",
+    chips: 250
 }
 
 let firstCard, secondCard;
@@ -28,6 +22,21 @@ let messageEl = document.getElementById("message-el");
 let cardsEl = document.querySelector("#cards-el");
 
 let sumEl = document.querySelector("#sum-el"); // based on a CSS selector
+
+let playerEl = document.querySelector("#player-el");
+
+playerEl.textContent = player.name + ": €" + player.chips;
+
+// Creating a function to generate a random card
+function getRandomCard() {
+    // Math.random() generates a random number in the range [0,1)
+    // Math.random()*a generates a random number in the range [0,a)
+    
+    // For the sake of simplicity, we assume the value of the ace to be 11 at all times!
+    // returning a number between 2 and 11
+    let n = 2 + Math.floor(Math.random()*(11-1));
+    return n;
+}
 
 // Creating a renderGame() function to render the state of the game at every step
 function renderGame() {
