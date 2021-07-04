@@ -1,5 +1,5 @@
 ## Blackjack web app
-This repository contains the code for a basic Blackjack web app that I had built.
+This repository contains the code for a basic Blackjack web app that I had built.<br/>
 To interact with the app, please visit: https://therangecoder.github.io/Blackjack-web-app/
 
 ### References
