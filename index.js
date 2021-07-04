@@ -38,6 +38,27 @@ function getRandomCard() {
     return n;
 }
 
+// A function to calculate the sum of all the cards
+function getSum(arr) {
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++) {
+        sum += arr[i];
+    }
+    return sum;
+}
+
+// A function to change a soft 11 to a hard 1, in an array
+function elevenToOne(arr) {
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === 11) {
+            arr[i] = 1;
+            break;
+        }
+    }
+    return arr;
+}
+
+
 // Creating a renderGame() function to render the state of the game at every step
 function renderGame() {
     cardsEl.textContent = "Cards: ";
@@ -52,10 +73,21 @@ function renderGame() {
         message = "Congratulations! You've got Blackjack!";
         hasBlackjack = true;
     } else {
+        cards  = elevenToOne(cards);
+        sum = getSum(cards);
+
+        cardsEl.textContent = "Cards: ";
+
+        for (let k = 0; k < cards.length; k++) {
+            cardsEl.textContent += cards[k] + " ";
+        }
+    }
+
+    if (sum > 21) {
         message = "Sorry! You're out of the game";
         isAlive = false;
     }
-    
+
     messageEl.textContent = message;
     sumEl.textContent = "Sum: "+sum;
 }
