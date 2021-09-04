@@ -3,6 +3,8 @@
   <p align="center">
     The perfect app to give you an initial exposure to the fundamentals of the game, that none of us is a stranger to: Blackjack!
     <br />
+    <a href="https://therangecoder.github.io/Blackjack-web-app/"><strong>View Demo »</strong></a>
+    <br />
   </p>
 </p>
 
