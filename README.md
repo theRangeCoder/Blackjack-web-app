@@ -66,7 +66,7 @@ To get a local copy of the app, up and running on your system, follow these step
 
 2. Clone the repository
    ```sh
-   git clone https://github.com/theRangeCoder/Blackjack-web-app.git
+   git clone https://github.com/[your_username]/Blackjack-web-app.git
    ```
 3. Navigate into the directory
    ```sh
